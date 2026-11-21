@@ -1,0 +1,162 @@
+{
+  "product": "Fluxo",
+  "version": "1.0",
+  "documents": [
+    {
+      "id": "planos",
+      "title": "Planos e cobrança",
+      "facts": [
+        {
+          "id": "plano-starter-preco",
+          "text": "O plano Starter custa R$ 89 por mês com cobrança anual e R$ 109 por mês com cobrança mensal.",
+          "key_terms": ["89", "109"]
+        },
+        {
+          "id": "plano-pro-notas",
+          "text": "O plano Pro inclui até 2.000 notas fiscais por mês. Cada nota excedente custa R$ 0,40.",
+          "key_terms": ["2.000", "0,40"]
+        },
+        {
+          "id": "teste-gratuito",
+          "text": "O período de teste gratuito dura 14 dias e não exige cartão de crédito.",
+          "key_terms": ["14 dias"]
+        },
+        {
+          "id": "downgrade-vigencia",
+          "text": "Quando o cliente faz downgrade de plano, a mudança passa a valer no próximo ciclo de cobrança, e não imediatamente.",
+          "key_terms": ["próximo ciclo"]
+        }
+      ]
+    },
+    {
+      "id": "reembolsos",
+      "title": "Reembolsos e contestações",
+      "facts": [
+        {
+          "id": "reembolso-prazo-solicitacao",
+          "text": "O cliente pode pedir reembolso em até 7 dias corridos após a cobrança, desde que a conta tenha emitido no máximo 50 notas fiscais.",
+          "key_terms": ["7 dias", "50"]
+        },
+        {
+          "id": "reembolso-anual-multa",
+          "text": "Em planos anuais, o reembolso proporcional considera os meses não utilizados e aplica multa de 10% sobre o saldo.",
+          "key_terms": ["10%"]
+        },
+        {
+          "id": "reembolso-prazo-credito",
+          "text": "O valor reembolsado volta ao meio de pagamento original em até 10 dias úteis.",
+          "key_terms": ["10 dias úteis"]
+        },
+        {
+          "id": "contestacao-bancaria",
+          "text": "Contestações feitas diretamente no banco são analisadas pelo time financeiro e deixam a conta suspensa por até 5 dias úteis.",
+          "key_terms": ["5 dias úteis"]
+        }
+      ]
+    },
+    {
+      "id": "notas-fiscais",
+      "title": "Emissão de notas fiscais",
+      "facts": [
+        {
+          "id": "nfe-series",
+          "text": "Cada CNPJ pode ter até 3 séries de numeração de notas fiscais.",
+          "key_terms": ["3 séries"]
+        },
+        {
+          "id": "nfe-cancelamento",
+          "text": "Uma nota fiscal só pode ser cancelada em até 24 horas após a emissão.",
+          "key_terms": ["24 horas"]
+        },
+        {
+          "id": "nfe-cce",
+          "text": "A carta de correção eletrônica (CC-e) é aceita para notas emitidas nos últimos 30 dias.",
+          "key_terms": ["30 dias"]
+        },
+        {
+          "id": "nfe-contingencia",
+          "text": "Se a SEFAZ estiver indisponível, o Fluxo emite a nota em contingência com DANFE e transmite a nota em até 72 horas após o retorno do serviço.",
+          "key_terms": ["72 horas"]
+        }
+      ]
+    },
+    {
+      "id": "seguranca",
+      "title": "Segurança e acesso",
+      "facts": [
+        {
+          "id": "seguranca-2fa",
+          "text": "A autenticação em dois fatores é obrigatória para usuários com perfil de administrador.",
+          "key_terms": ["administrador"]
+        },
+        {
+          "id": "sessao-inatividade",
+          "text": "Sessões inativas são encerradas automaticamente após 45 minutos.",
+          "key_terms": ["45 minutos"]
+        },
+        {
+          "id": "chaves-api-validade",
+          "text": "Chaves de API expiram em 180 dias e precisam ser rotacionadas manualmente no painel.",
+          "key_terms": ["180 dias"]
+        },
+        {
+          "id": "retencao-dados",
+          "text": "Notas fiscais e registros fiscais ficam armazenados por 5 anos, mesmo depois do cancelamento da conta.",
+          "key_terms": ["5 anos"]
+        }
+      ]
+    },
+    {
+      "id": "integracoes",
+      "title": "Integrações e webhooks",
+      "facts": [
+        {
+          "id": "webhook-tentativas",
+          "text": "Webhooks que falham são reenviados até 6 vezes, com intervalo exponencial começando em 1 minuto.",
+          "key_terms": ["6 vezes", "1 minuto"]
+        },
+        {
+          "id": "webhook-timeout",
+          "text": "O endpoint de destino tem 10 segundos para responder a um webhook.",
+          "key_terms": ["10 segundos"]
+        },
+        {
+          "id": "api-limite",
+          "text": "A API aceita 120 requisições por minuto por chave. Ao exceder o limite, a resposta é HTTP 429.",
+          "key_terms": ["120", "429"]
+        },
+        {
+          "id": "integracao-erp",
+          "text": "A integração com ERP é feita por exportação XML no layout 4.0 e não está disponível no plano Starter.",
+          "key_terms": ["4.0", "Starter"]
+        }
+      ]
+    },
+    {
+      "id": "suporte",
+      "title": "Suporte e disponibilidade",
+      "facts": [
+        {
+          "id": "sla-p1",
+          "text": "Chamados críticos (P1) recebem a primeira resposta em até 1 hora útil nos planos Pro e Enterprise.",
+          "key_terms": ["1 hora"]
+        },
+        {
+          "id": "atendimento-horario",
+          "text": "O atendimento humano funciona de segunda a sexta, das 8h às 18h, no horário de Brasília.",
+          "key_terms": ["8h", "18h"]
+        },
+        {
+          "id": "canais-starter",
+          "text": "Clientes do plano Starter são atendidos apenas por e-mail e pela central de ajuda.",
+          "key_terms": ["e-mail|email", "central de ajuda"]
+        },
+        {
+          "id": "disponibilidade",
+          "text": "O compromisso de disponibilidade mensal é de 99,5%. Abaixo disso, o cliente recebe crédito de 10% da mensalidade.",
+          "key_terms": ["99,5", "10%"]
+        }
+      ]
+    }
+  ]
+}

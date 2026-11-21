@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "custom-llm-lora-vs-rag"
+version = "0.1.0"
+description = "Empirical comparison of LoRA fine-tuning, RAG and hybrid approaches for domain knowledge."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.2",
+    "transformers>=4.46",
+    "peft>=0.13",
+    "trl>=0.20",
+    "datasets>=2.20",
+    "accelerate>=0.34",
+    "sentence-transformers>=3.0",
+    "faiss-cpu>=1.8",
+    "openai>=1.40",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "pandas>=2.1",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+gpu = ["bitsandbytes>=0.43"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

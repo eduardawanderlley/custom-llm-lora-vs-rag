@@ -1,0 +1,37 @@
+seed: 42
+
+paths:
+  knowledge_base: data/knowledge_base/fluxo_v1.json
+  knowledge_updates: data/knowledge_base/fluxo_updates.json
+  out_of_scope_questions: data/evaluation/out_of_scope.jsonl
+  artifacts_dir: artifacts
+
+generation:
+  model: gpt-4o-mini
+  questions_per_fact: 3
+  heldout_fact_ratio: 0.2
+  dedup_similarity: 0.9
+  review_sample_size: 30
+  temperature: 0.7
+  max_tokens: 500
+
+training:
+  base_model: Qwen/Qwen2.5-1.5B-Instruct
+  max_seq_length: 1024
+  num_train_epochs: 3
+  learning_rate: 0.0002
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  load_in_4bit: true
+
+retrieval:
+  embedding_model: intfloat/multilingual-e5-small
+  top_k: 3
+
+evaluation:
+  judge_model: gpt-4o-mini
+  max_new_tokens: 256
